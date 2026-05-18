@@ -1,9 +1,10 @@
+
 const movieInput = document.getElementById('movieInput');
 const searchBtn = document.getElementById('searchBtn');
 const movieGrid = document.getElementById('movieGrid');
 const statusMessage = document.getElementById('statusMessage');
 
-//  butang carian
+// butang carian
 searchBtn.addEventListener('click', () => {
     const query = movieInput.value.trim();
     if (query) {
@@ -13,7 +14,7 @@ searchBtn.addEventListener('click', () => {
     }
 });
 
-// cadangan (tags)
+
 document.querySelectorAll('.tag').forEach(tag => {
     tag.addEventListener('click', () => {
         const query = tag.textContent;
@@ -25,7 +26,7 @@ document.querySelectorAll('.tag').forEach(tag => {
 
 async function searchMovies(query) {
     try {
-        //  keadaan Loading
+       
         movieGrid.innerHTML = '<div class="spinner"></div>';
         statusMessage.textContent = 'Sedang mencari...';
 
@@ -46,7 +47,7 @@ async function searchMovies(query) {
     }
 }
 
-// memaparkan data
+// memaparkan data 
 function displayMovies(results) {
     movieGrid.innerHTML = ''; 
 
@@ -55,10 +56,10 @@ function displayMovies(results) {
         const card = document.createElement('div');
         card.classList.add('movie-card');
 
-        // placeholder jika tiada poster
+        
         const poster = show.image ? show.image.medium : 'https://via.placeholder.com/210x295?text=Tiada+Poster';
         
-        // Ambil tahun sahaja
+       
         const year = show.premiered ? show.premiered.split('-')[0] : 'N/A';
 
         card.innerHTML = `
@@ -76,7 +77,6 @@ function displayMovies(results) {
     });
 }
 
-// untuk mesej
 function showMessage(msg, type) {
     statusMessage.textContent = msg;
     statusMessage.style.color = type === 'error' ? '#fb7185' : '#6366f1';
