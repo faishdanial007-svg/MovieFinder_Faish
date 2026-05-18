@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skema Jawapan: Movie Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🎬 Movie<span>Finder</span></h1>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="movieInput" placeholder="Cari siri TV atau filem...">
+                <button id="searchBtn">Cari</button>
+            </div>
+            <div class="suggestions">
+                <span>Cadangan:</span>
+                <button class="tag">Batman</button>
+                <button class="tag">Spider-man</button>
+                <button class="tag">Avengers</button>
+                <button class="tag">Stranger Things</button>
+            </div>
+            <div id="statusMessage" class="status-msg"></div>
+        </section>
+
+        <main id="movieGrid" class="movie-grid">
+           
+            <div class="placeholder-text">Sila masukkan tajuk filem untuk memulakan carian.</div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 MovieFinder. Faish Danial.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
